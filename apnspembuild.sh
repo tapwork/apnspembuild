@@ -13,8 +13,8 @@ mkdir $temp_path
 mkdir $pem_path
 
 # Convert the .cer file into a .pem file:
-openssl x509 -in $1 -inform der -out $temp_path/apns-production-cert.pem
-openssl x509 -in $2 -inform der -out $temp_path/apns-dev-cert.pem
+openssl x509 -in $1 -inform der -out $temp_path/apns-dev-cert.pem
+openssl x509 -in $2 -inform der -out $temp_path/apns-production-cert.pem
 
 #Convert the private key’s .p12 file into a .pem file: 
 openssl pkcs12 -nocerts -out $temp_path/push-key.pem -in $3
